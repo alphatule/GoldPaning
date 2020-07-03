@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
 	Citizen.Wait(2000)
 	VORP.RegisterUsableItem("goldpan", function(data)
 		TriggerClientEvent('goldpanner:StartPaning', data.source)
-		TriggerClientEvent("vorp:TipBottom", data.source, "Buscando oro...", 20000) 
+		-- TriggerClientEvent("vorp:TipBottom", data.source, "Buscando oro...", 20000) 
 	end)
 end)
 

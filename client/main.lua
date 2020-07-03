@@ -37,21 +37,35 @@ AddEventHandler('goldpanner:StartPaning', function()
         local ped = PlayerPedId()
         local coords = GetEntityCoords(ped)
         local Water = Citizen.InvokeNative(0x5BA7A68A346A5A91,coords.x, coords.y, coords.z)
+        local foundwater = false
         for k,v in pairs(WaterTypes) do
             if Water == WaterTypes[k]["waterhash"]  then
+                foundwater = true
                 CrouchAnimAndAttach()
                 Wait(6000)
                 ClearPedTasks(ped)
                 GoldShake()
-                w = math.random(12000,28000)
-                Wait(w)
+                w = math.random(12,28)
+                local seconds = w/1
+                for i=1,seconds,1 do
+                    TriggerEvent("vorp:Tip", "Buscando oro.", 500)
+                    Wait(335)
+                    TriggerEvent("vorp:Tip", "Buscando oro..", 500)
+                    Wait(335) 
+                    TriggerEvent("vorp:Tip", "Buscando oro...", 500)
+                    Wait(335) 
+                end
+                -- Wait(w)
                 ClearPedTasks(ped)
                 DeleteObject(entity)
                 DeleteEntity(entity)
                 TriggerServerEvent("search")
-                Panning = false
                 break
             end
+        end
+        Panning = false
+        if foundwater == false then
+            TriggerEvent("vorp:TipBottom", "No puedes coger oro aqui", 10000)
         end
     end
 end)

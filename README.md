@@ -10,6 +10,7 @@
 
 - Add ```ensure GoldPaning``` in your server.cfg
 - Add items are in ```.\sql``` In spanish ```es_GoldPaning_items.sql``` English ```en_GoldPaning_items.sql```
+- Add the images from ```img folder``` to ```\vorp_inventory\html\img\items```
 - The script is on spanish but you can translate in
 - ```.\server\main.lua```-lines 21, 23
 and 

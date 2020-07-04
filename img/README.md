@@ -1,0 +1,1 @@
+- Add the pictures to ```.\vorp_inventory\html\img\items``` 

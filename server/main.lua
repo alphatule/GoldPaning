@@ -6,7 +6,6 @@ Citizen.CreateThread(function()
 	Citizen.Wait(2000)
 	VORP.RegisterUsableItem("goldpan", function(data)
 		TriggerClientEvent('goldpanner:StartPaning', data.source)
-		-- TriggerClientEvent("vorp:TipBottom", data.source, "Buscando oro...", 20000) 
 	end)
 end)
 
@@ -18,9 +17,9 @@ AddEventHandler("search", function()
     local _source = source 
     if r < 3 then
         VORP.addItem(_source, item,math.random(1,3))
-        TriggerClientEvent("vorp:TipBottom", _source, "Has encontrado algo de oro", 6000)
+        TriggerClientEvent("vorp:TipBottom", _source, Config.oro_encontrado, 6000)
     else
-        TriggerClientEvent("vorp:TipBottom", _source, "No has encontrado nada", 6000)
+        TriggerClientEvent("vorp:TipBottom", _source, Config.oro_no_encontrado, 6000)
     end
 end)
 

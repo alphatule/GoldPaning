@@ -48,11 +48,11 @@ AddEventHandler('goldpanner:StartPaning', function()
                 w = math.random(12,28)
                 local seconds = w/1
                 for i=1,seconds,1 do
-                    TriggerEvent("vorp:Tip", "Buscando oro.", 500)
+                    TriggerEvent("vorp:Tip", Config.oro_1, 500)
                     Wait(335)
-                    TriggerEvent("vorp:Tip", "Buscando oro..", 500)
+                    TriggerEvent("vorp:Tip", Config.oro_2, 500)
                     Wait(335) 
-                    TriggerEvent("vorp:Tip", "Buscando oro...", 500)
+                    TriggerEvent("vorp:Tip", Config.oro_3, 500)
                     Wait(335) 
                 end
                 -- Wait(w)
@@ -65,7 +65,7 @@ AddEventHandler('goldpanner:StartPaning', function()
         end
         Panning = false
         if foundwater == false then
-            TriggerEvent("vorp:TipBottom", "No puedes coger oro aqui", 10000)
+            TriggerEvent("vorp:TipBottom", Config.oro_no_recoger, 10000)
         end
     end
 end)

@@ -17,7 +17,7 @@
 - To get support --> [Discord](http://discord.vorpcore.com/)
 
 
-======================================
-
+## 4. Info
+- KLS
 - Based on ```Frankie#0007``` [GoldPanner](https://discordapp.com/channels/648268213859254309/648268616214511655/712026960133488761)
 
